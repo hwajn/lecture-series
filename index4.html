@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>RESEARCH METHODS FOR GRAPHIC DESIGN</title>
+        <meta name="description" content="OCADU Research Methods for Graphic Design: Upcoming Lecture: Mindy Seu">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body style="background:red;">
+        
+        <class="buttonparent">
+            <class="buttonparent"><button class=spacer></button><a href=index.html>1</a>
+            <a href=index2.html>2</a>
+            <a href=index3.html>3</a>
+            <a style="text-decoration: underline;"href=index4.html>4</a></class>
+        <h1>
+            
+            RESEARCH<br />METHODS<br/>
+            FOR GRAPHIC<br/>
+            DESIGN
+        </h1>
+            <h2 class="current">mindy seu&mdash;09.27, 6:30pm EST</h2>
+            <h2 class="blur">danielle aubert&mdash;10.25</h2>
+            <h2 class="blur">kelly walters&mdash;11.15</h2>
+            <h2 class="blur">cem eskinazi&mdash;12.06</h2>
+
+        <h3>Design by Hwa-Jin Jun</h3>
+
+<!--         
+        <div id="countdown-container">
+            <p style="font-size:0.5em">Please join us for a visiting lecture by </p>
+            <h1 class="tt-hover">MINDY SEU</h1>
+            <p style="font-size:0.5em">September 27<br />
+                6:30-7:30pm EST<br /><br /></p>
+            
+            
+
+                <p style="font-size:0.5em" id="countdown">Check back in:<br /><span class="mono"></span></p>
+
+        </div> -->
+<!-- 
+ 
+        <div class="tooltip">
+            <a href="https://mindyseu.com" target="_blank">Mindy Seu</a> is a designer and researcher. 
+                She holds an M.Des from Harvard’s Graduate School of Design and a B.A. in Design Media Arts from University of California, Los Angeles. 
+                As a fellow at the Harvard Law School’s Berkman Klein Center for the Internet & Society, she began the digital <a href="https://cyberfeminismindex.com/" target="_blank">Cyberfeminism Index</a>, 
+                which was later commissioned by Rhizome and presented at the New Museum. 
+                The printed publication Cyberfeminism Catalog is a 2021 recipient of the Graham Foundation Grant and will be published in Fall 2022. 
+                Seu has been a fellow at the Internet Archive, as well as a designer for 2×4’s Interactive Media team and the Museum of Modern Art’s 
+                in-house design studio. She has given lectures and workshops at Barbican Center, CalArts, Parsons, Pratt, RISD, Berkeley Art Museum, 
+                among others. Seu is currently an <a href="https://designforthe.net" target="_blank">Assistant Professor at Rutgers Mason Gross School of the Arts and Critic at Yale School of Art</a>.
+
+            </div>
+ -->
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script>
+        var cWidth = $(window).width();
+var cHeight=$(window).height();
+function setup() {
+  createCanvas(cWidth, cHeight);
+}
+
+function draw() {
+	
+	//ourHue = 70+parseInt(((mouseY/cHeight)*20).toFixed(0));
+	//
+//	console.log(ourHue);
+	
+//	$("body").css("color","hsl("+ourHue+", 100%, 50%)");
+	
+	mouseSpeed =  dist(mouseX, mouseY, pmouseX, pmouseY);
+	
+				strokeWeight(100);
+	
+	
+
+	
+	//colorMode(HSB, 100);
+	//stroke(ourHue, 100, 100,90);
+	stroke(144,0,255);
+	line(mouseX, mouseY, pmouseX, pmouseY);
+    
+
+}
+
+function mousePressed() {
+  clear();
+ 
+}
+    </script>
+<script>
+const countDownDate = new Date("Sep 27, 2021 18:30:00 GMT-4:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  $(".mono").html(`${days} days<br />${hours} hours<br />${minutes} minutes<br />${seconds} seconds`);
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    $("#countdown").html(`
+    <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzRmMmQ2Y2ItODBmNC00NGM1LWE2YWEtNzFkNDA2YWRlZDMy%40thread.v2/0?context=%7b%22Tid%22%3a%2206e469d1-2d2a-468f-ae9b-7df0968eb6d7%22%2c%22Oid%22%3a%2246320d9a-af16-4052-ae2a-78b2a55bd352%22%2c%22IsBroadcastMeeting%22%3atrue%7d&btype=a&role=a">Click here to join</a>`);
+  }
+}, 1000);
+
+
+$(".tt-hover, .tooltip").hover(function(e){
+    $(".tooltip").css({
+        "display":"block",
+        left:e.clientX,
+        top:e.clientY
+    })
+})
+
+$(".tt-hover").mouseout(function(){
+    $(".tooltip").css({"display":"none"})
+});
+</script>
+
+</body>
+</html>
